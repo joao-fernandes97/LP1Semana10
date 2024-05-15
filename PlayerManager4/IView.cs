@@ -9,5 +9,7 @@ namespace PlayerManager4
         Player CreatePlayer();
 
         void ListPlayers(IEnumerable<Player> playersToList);
+
+        int AskMinScore();
     }
 }

@@ -70,6 +70,13 @@ namespace PlayerManager4
             }
             Console.WriteLine();
         }
+
+        public int AskMinScore()
+        {
+            // Ask the user what is the minimum score
+            Console.Write("\nMinimum score player should have? ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
         
     }
 }

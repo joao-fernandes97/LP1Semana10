@@ -98,9 +98,7 @@ namespace PlayerManager4
             // Enumerable of players with score higher than the minimum score
             IEnumerable<Player> playersWithScoreGreaterThan;
 
-            // Ask the user what is the minimum score
-            Console.Write("\nMinimum score player should have? ");
-            minScore = Convert.ToInt32(Console.ReadLine());
+            minScore = view.AskMinScore();
 
             // Get players with score higher than the user-specified value
             playersWithScoreGreaterThan =
