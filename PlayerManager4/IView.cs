@@ -17,5 +17,7 @@ namespace PlayerManager4
         void InvalidOptionMsg();
 
         void ConfirmMsg();
+
+        void ClosingMsg();
     }
 }

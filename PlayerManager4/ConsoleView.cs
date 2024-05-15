@@ -106,6 +106,12 @@ namespace PlayerManager4
             Console.ReadKey(true);
             Console.WriteLine("\n");
         }
+
+        public void ClosingMsg()
+        {
+            Console.WriteLine("Bye!");
+        }
+            
                 
         
     }

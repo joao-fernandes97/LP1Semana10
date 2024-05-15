@@ -64,7 +64,7 @@ namespace PlayerManager4
                         SortPlayerList();
                         break;
                     case 0:
-                        Console.WriteLine("Bye!");
+                        view.ClosingMsg();
                         break;
                     default:
                         view.InvalidOptionMsg();
