@@ -36,33 +36,34 @@ namespace PlayerManager4
         /// </summary>
         public void Start(IView view)
         {
+            this.view = view;
+            
             // We keep the user's option here
-            string option;
+            int option;
 
             // Main program loop
             do
             {
                 // Show menu and get user option
-                ShowMenu();
-                option = Console.ReadLine();
+                option = view.ShowMenu();
 
                 // Determine the option specified by the user and act on it
                 switch (option)
                 {
-                    case "1":
+                    case 1:
                         // Insert player
                         InsertPlayer();
                         break;
-                    case "2":
+                    case 2:
                         ListPlayers(playerList);
                         break;
-                    case "3":
+                    case 3:
                         ListPlayersWithScoreGreaterThan();
                         break;
-                    case "4":
+                    case 4:
                         SortPlayerList();
                         break;
-                    case "0":
+                    case 0:
                         Console.WriteLine("Bye!");
                         break;
                     default:
@@ -76,22 +77,7 @@ namespace PlayerManager4
                 Console.WriteLine("\n");
 
                 // Loop keeps going until players choses to quit (option 4)
-            } while (option != "0");
-        }
-
-        /// <summary>
-        /// Shows the main menu.
-        /// </summary>
-        private void ShowMenu()
-        {
-            Console.WriteLine("Menu");
-            Console.WriteLine("----\n");
-            Console.WriteLine("1. Insert player");
-            Console.WriteLine("2. List all players");
-            Console.WriteLine("3. List players with score greater than");
-            Console.WriteLine("4. Sort players");
-            Console.WriteLine("0. Quit\n");
-            Console.Write("Your choice > ");
+            } while (option != 0);
         }
 
         /// <summary>
