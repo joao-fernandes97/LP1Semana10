@@ -30,6 +30,24 @@ namespace PlayerManager4
 
             return int.Parse(Console.ReadLine());
         }
+
+        public Player CreatePlayer()
+        {
+            // Variables
+            string name;
+            int score;
+
+            // Ask for player info
+            Console.WriteLine("\nInsert player");
+            Console.WriteLine("-------------\n");
+            Console.Write("Name: ");
+            name = Console.ReadLine();
+            Console.Write("Score: ");
+            score = Convert.ToInt32(Console.ReadLine());
+
+            // Create new player and add it to list
+            return new Player(name, score);
+        }
         
     }
 }

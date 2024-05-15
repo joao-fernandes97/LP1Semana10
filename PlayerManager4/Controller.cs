@@ -85,22 +85,7 @@ namespace PlayerManager4
         /// </summary>
         private void InsertPlayer()
         {
-            // Variables
-            string name;
-            int score;
-            Player newPlayer;
-
-            // Ask for player info
-            Console.WriteLine("\nInsert player");
-            Console.WriteLine("-------------\n");
-            Console.Write("Name: ");
-            name = Console.ReadLine();
-            Console.Write("Score: ");
-            score = Convert.ToInt32(Console.ReadLine());
-
-            // Create new player and add it to list
-            newPlayer = new Player(name, score);
-            playerList.Add(newPlayer);
+            playerList.Add(view.CreatePlayer());
         }
 
         /// <summary>
