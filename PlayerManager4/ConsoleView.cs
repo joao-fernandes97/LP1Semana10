@@ -98,6 +98,15 @@ namespace PlayerManager4
         {
             Console.Error.WriteLine("\n>>> Unknown option! <<<\n");
         }
+
+        // Wait for user to press a key...
+        public void ConfirmMsg()
+        {
+            Console.Write("\nPress any key to continue...");
+            Console.ReadKey(true);
+            Console.WriteLine("\n");
+        }
+                
         
     }
 }

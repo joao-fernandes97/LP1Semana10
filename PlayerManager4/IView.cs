@@ -15,5 +15,7 @@ namespace PlayerManager4
         PlayerOrder AskSortOrder();
 
         void InvalidOptionMsg();
+
+        void ConfirmMsg();
     }
 }

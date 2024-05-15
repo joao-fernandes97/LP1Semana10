@@ -71,10 +71,7 @@ namespace PlayerManager4
                         break;
                 }
 
-                // Wait for user to press a key...
-                Console.Write("\nPress any key to continue...");
-                Console.ReadKey(true);
-                Console.WriteLine("\n");
+                view.ConfirmMsg();
 
                 // Loop keeps going until players choses to quit (option 4)
             } while (option != 0);
