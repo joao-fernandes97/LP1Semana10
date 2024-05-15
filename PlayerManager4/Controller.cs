@@ -17,39 +17,24 @@ namespace PlayerManager4
         // Comparer for comparing player by name (reverse alphabetical order)
         private readonly IComparer<Player> compareByNameReverse;
 
-        /// <summary>
-        /// Program begins here.
-        /// </summary>
-        /// <param name="args">Not used.</param>
-        private static void Main(string[] args)
-        {
-            // Create a new instance of the player listing program
-            Controller prog = new Controller();
-            // Start the program instance
-            prog.Start();
-        }
+        private IView view;
 
         /// <summary>
         /// Creates a new instance of the player listing program.
         /// </summary>
-        private Controller()
+        public Controller(List<Player> playerList)
         {
             // Initialize player comparers
             compareByName = new CompareByName(true);
             compareByNameReverse = new CompareByName(false);
 
-            // Initialize the player list with two players using collection
-            // initialization syntax
-            playerList = new List<Player>() {
-                new Player("Best player ever", 100),
-                new Player("An even better player", 500)
-            };
+            
         }
 
         /// <summary>
         /// Start the player listing program instance
         /// </summary>
-        private void Start()
+        public void Start(IView view)
         {
             // We keep the user's option here
             string option;
