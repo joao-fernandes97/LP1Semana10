@@ -67,7 +67,7 @@ namespace PlayerManager4
                         Console.WriteLine("Bye!");
                         break;
                     default:
-                        Console.Error.WriteLine("\n>>> Unknown option! <<<\n");
+                        view.InvalidOptionMsg();
                         break;
                 }
 
@@ -151,7 +151,7 @@ namespace PlayerManager4
                     playerList.Sort(compareByNameReverse);
                     break;
                 default:
-                    Console.Error.WriteLine("\n>>> Unknown player order! <<<\n");
+                    view.InvalidOptionMsg();
                     break;
             }
         }

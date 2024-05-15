@@ -93,6 +93,11 @@ namespace PlayerManager4
 
             return Enum.Parse<PlayerOrder>(Console.ReadLine());
         }
+
+        public void InvalidOptionMsg()
+        {
+            Console.Error.WriteLine("\n>>> Unknown option! <<<\n");
+        }
         
     }
 }

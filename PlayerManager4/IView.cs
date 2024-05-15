@@ -13,5 +13,7 @@ namespace PlayerManager4
         int AskMinScore();
 
         PlayerOrder AskSortOrder();
+
+        void InvalidOptionMsg();
     }
 }
