@@ -28,7 +28,7 @@ namespace PlayerManager4
             compareByName = new CompareByName(true);
             compareByNameReverse = new CompareByName(false);
 
-            
+            this.playerList = playerList;
         }
 
         /// <summary>
