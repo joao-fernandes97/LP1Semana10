@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PlayerManager4
 {
     public interface IView
@@ -5,5 +7,7 @@ namespace PlayerManager4
         int ShowMenu();
 
         Player CreatePlayer();
+
+        void ListPlayers(IEnumerable<Player> playersToList);
     }
 }
