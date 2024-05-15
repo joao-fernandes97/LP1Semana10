@@ -11,5 +11,7 @@ namespace PlayerManager4
         void ListPlayers(IEnumerable<Player> playersToList);
 
         int AskMinScore();
+
+        PlayerOrder AskSortOrder();
     }
 }
