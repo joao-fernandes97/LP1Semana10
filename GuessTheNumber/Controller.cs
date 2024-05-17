@@ -4,44 +4,24 @@ namespace GuessTheNumber
 {
     public class Controller
     {
-        private int targetNumber;
+        private GuessGame guesser;
         private IView view;
         
-        public Controller(int targetNumber)
+        public Controller(GuessGame guesser)
         {
-            this.targetNumber = targetNumber;
+            this.guesser = guesser;
         }
         
         
         public void Start(IView view)
         {
             this.view = view;
-            int guess;
-            int attempts = 0;
-            bool guessedCorrectly = false;
 
             view.WelcomeMsg();
 
             // Game loop
-            while (!guessedCorrectly)
-            {
-                guess = view.TakeAGuess();
-                attempts++;
-
-                if (guess == targetNumber)
-                {
-                    view.SuccessMsg(attempts);
-                    guessedCorrectly = true;
-                }
-                else if (guess < targetNumber)
-                {
-                    view.LowMsg();
-                }
-                else
-                {
-                    view.HighMsg();
-                }
-            }
+            while (!guesser.GuessedCorrectly)
+                view.AttemptMsg(guesser.GuessMatch(view.TakeAGuess()));
 
             view.EndMsg();
         }

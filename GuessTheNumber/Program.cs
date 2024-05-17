@@ -6,14 +6,12 @@ namespace GuessTheNumber
     {
         private static void Main()
         {
-            // Generate a random number
-            Random random = new Random();
-            int targetInt = random.Next(1, 101);
+            GuessGame guesser = new GuessGame();
 
             // Generate a number between 1 and 100
-            Controller controller = new Controller(targetInt);
+            Controller controller = new Controller(guesser);
 
-            IView view = new ConsoleView(controller, targetInt);
+            IView view = new ConsoleView(controller, guesser);
 
             controller.Start(view);
         }

@@ -6,11 +6,11 @@ namespace GuessTheNumber
     {
         private readonly Controller controller;
 
-        private readonly int targetInt;
+        private readonly GuessGame guesser;
 
-        public ConsoleView(Controller controller, int targetInt){
+        public ConsoleView(Controller controller, GuessGame guesser){
             this.controller = controller;
-            this.targetInt = targetInt;
+            this.guesser = guesser;
         }
         
         public void WelcomeMsg()
@@ -25,22 +25,22 @@ namespace GuessTheNumber
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        public void SuccessMsg(int attempts)
+        /* public void SuccessMsg(int attempts)
         {
             Console.WriteLine(
                 "Congratulations! You guessed the number correctly!");
             Console.WriteLine("Number of attempts: " + attempts);
+        } */
+
+        public void AttemptMsg(string msg)
+        {
+            Console.WriteLine(msg);
         }
 
-        public void LowMsg()
+        /* public void HighMsg()
         {
-            Console.WriteLine("Too low! Try again.");
-        }
-
-        public void HighMsg()
-        {
-            Console.WriteLine("Too high! Try again.");
-        }
+            Console.WriteLine();
+        } */
 
         public void EndMsg()
         {
