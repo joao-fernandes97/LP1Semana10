@@ -2,8 +2,11 @@ namespace GuessTheNumber
 {
     public interface IView
     {
-        void WelcomeMsg();
-        
-        
+        void WelcomeMsg(); 
+        int TakeAGuess();
+        void SuccessMsg();
+        void LowMsg();
+        void HighMsg();
+        void EndMsg();  
     }
 }
