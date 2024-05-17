@@ -15,7 +15,7 @@ namespace GuessTheNumber
 
             IView view = new ConsoleView(controller, targetInt);
 
-            controller.Start();
+            controller.Start(view);
         }
     }
 }
