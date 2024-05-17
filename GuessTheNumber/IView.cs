@@ -4,7 +4,7 @@ namespace GuessTheNumber
     {
         void WelcomeMsg(); 
         int TakeAGuess();
-        void SuccessMsg();
+        void SuccessMsg(int attempts);
         void LowMsg();
         void HighMsg();
         void EndMsg();  

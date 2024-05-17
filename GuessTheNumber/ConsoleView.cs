@@ -1,3 +1,5 @@
+using System;
+
 namespace GuessTheNumber
 {
     public class ConsoleView : IView
@@ -6,7 +8,7 @@ namespace GuessTheNumber
 
         private readonly int targetInt;
 
-        public ConsoleView(Controller controller, List<Player> targetInt){
+        public ConsoleView(Controller controller, int targetInt){
             this.controller = controller;
             this.targetInt = targetInt;
         }
@@ -23,7 +25,7 @@ namespace GuessTheNumber
             return Convert.ToInt32(Console.ReadLine());
         }
 
-        public void SuccessMsg()
+        public void SuccessMsg(int attempts)
         {
             Console.WriteLine(
                 "Congratulations! You guessed the number correctly!");

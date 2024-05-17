@@ -13,7 +13,7 @@ namespace GuessTheNumber
         }
         
         
-        private static void Start(IView view)
+        public void Start(IView view)
         {
             this.view = view;
             int guess;
@@ -30,7 +30,7 @@ namespace GuessTheNumber
 
                 if (guess == targetNumber)
                 {
-                    view.SuccessMsg();
+                    view.SuccessMsg(attempts);
                     guessedCorrectly = true;
                 }
                 else if (guess < targetNumber)
